@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>HMCAM</title>
+	<style> *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Mochiy Pop One', sans-serif;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #252839;
+}
+ul{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+li{
+	position: relative;
+	list-style: none;
+}
+a{
+	font-size: 4em;
+	text-decoration: none;
+	letter-spacing: 2px;
+	line-height: 1em;
+	text-transform: uppercase;
+	color: transparent;
+	-webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+a::before{
+	content: attr(data-text);
+	position: absolute;
+	color: var(--clr);
+	width: 0;
+	overflow: hidden;
+	transition: 1.2s;
+	border-right: 8px solid var(--clr);
+	-webkit-text-stroke: 1px var(--clr);
+}
+a:hover::before{
+	width: 100%;
+	filter: drop-shadow(0 0 25px var(--clr))
+} </style>
+</head>
+<body>
+	<ul>
+		<li style="--clr:#00ade1">
+		  <a href="#" data-text="&nbsp;HOME">&nbsp;HOME&nbsp;</a>
+		</li>
+		<li style="--clr:#ff6492">
+		  <a href="#" data-text="&nbsp;MY COMMUNITY">&nbsp;MY COMMUNITY&nbsp;</a>
+		</li>
+		<li style="--clr:#ffdd1c">
+		  <a href="#" data-text="&nbsp;CONTACT">&nbsp;CONTACT&nbsp;</a>
+		</li>
+		<li style="--clr:#00dc82">
+		  <a href="#" data-text="&nbsp;ABOUT">&nbsp;ABOUT&nbsp;</a>
+		</li>
+		<li style="--clr:#dc00d4">
+		  <a href="#" data-text="&nbsp;MORE">&nbsp;MORE&nbsp;</a>
+		</li>
+	  </ul>
+</body>
+</html>
